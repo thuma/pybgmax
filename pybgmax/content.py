@@ -206,7 +206,7 @@ class Deduction(Payment):
 
     def __init__(self, amount, sender, references, channel, serial,
                  has_image, payment_informations, deduction_code):
-        super().__init__(amount, sender, references, channel, serial,
+        super(Deduction, self).__init__(amount, sender, references, channel, serial,
                          has_image, payment_informations)
 
         self.__deduction_code = deduction_code
