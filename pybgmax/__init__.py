@@ -25,8 +25,8 @@ CHANNEL_AG = 4
 def load(txt_file):
     data = None
     if isinstance(txt_file, str):
-        with open(txt_file, 'r', encoding='ISO-8859-1') as fp:
-            data = fp.read()
+        with open(txt_file, 'r') as fp:
+            data = fp.read().decode('ISO-8859-1')
     elif hasattr(txt_file, 'read'):
         data = txt_file.read()
         if isinstance(data, bytes):
